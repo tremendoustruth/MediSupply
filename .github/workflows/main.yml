@@ -15,11 +15,13 @@ jobs:
 #       # - run: npm run start & 
 
   test:
+    defaults:
+      run: 
+        working-directory: front-end
     runs-on: ubuntu-latest
     steps:
-      - working-directory: front-end
-        run: npm ci
-        run: npm t
+      - run: npm ci
+      - run: npm t
 
   # deploy:
   #   needs: test 
