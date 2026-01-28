@@ -80,11 +80,22 @@ async function updateById(id, updatedData) {
 //     .finally(() => client.close());
 
 async function deleteProduct(id) {
-    await inventoryItems.deleteOne({_id: new ObjectId(id)})
-    return
+    const result = await inventoryItems.deleteOne({_id: new ObjectId(id)})
+    return result.deletedCount === 1; // return true if deleted, false otherwise
 }
 
 // deleteProduct("697945e1727cca0f9c03a16d")
 //     .then(console.log)
 //     .catch(console.error)
 //     .finally(() => client.close())
+
+
+module.exports = {
+  createIndex,
+  createProduct,
+  getAllProducts,
+  getProductById,
+  updateById,
+  deleteProduct,
+  client, // optional, but useful for graceful shutdown
+};
