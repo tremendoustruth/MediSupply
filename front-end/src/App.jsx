@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Footer from './Footer'
 import NavBar from './NavBar.jsx'
-import Product from './Product.jsx'
 import CartDrawer from './CartDrawer.jsx'
 import ProductList from './ProductList.jsx'
 
@@ -93,7 +92,7 @@ function App() {
       <main className="content">
         <div className="page">
           <h1>Welcome to MediSupply!</h1>
-          
+
           {/* add onAddToCart */}
           {products && <ProductList products={products} onAddToCart={addToCart} />}
         </div>

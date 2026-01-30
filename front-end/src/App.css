@@ -13,9 +13,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -43,7 +45,8 @@
   color: #888;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -59,8 +62,9 @@ html, body {
 }
 
 .page {
-  max-width: 1200px;   /* centers content area */
+  max-width: 1200px;
+  /* centers content area */
   margin: 0 auto;
   padding: 32px 20px;
-  text-align: center;  /* centers text and button */
+  /* centers text and button */
 }
