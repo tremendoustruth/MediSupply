@@ -16,12 +16,13 @@ function ProductList({ products }) {
             <div className={styles.productList}>
                 {products.map((product) => (
                     <Product
-                        key={product.id}
-                        id={product.id}
+                        key={product._id}
+                        id={product._id}
                         title={product.title}
                         description={product.description}
-                        url={post.url} />
-                ))}
+                        price={product.price}
+                        url={product.url} />
+                    ))}
             </div>
         </main>
     )
