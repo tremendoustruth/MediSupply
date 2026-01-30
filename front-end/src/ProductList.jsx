@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./ProductList.module.css";
 import { Link } from "react-router"
 
-function ProductList({ products }) {
+function ProductList({ products, onAddToCart }) {
 
     if (products.length === 0) {
         return <p>No products available.</p>
@@ -13,7 +13,7 @@ function ProductList({ products }) {
     return (
         <main>
             <h1>All Products:</h1>
-            <div className={styles.productList}>
+            <div className={styles.productList} >
                 {products.map((product) => (
                     <Product
                         key={product._id}
@@ -21,12 +21,13 @@ function ProductList({ products }) {
                         title={product.title}
                         description={product.description}
                         price={product.price}
-                        url={product.url} />
-                    ))}
+                        url={product.url}
+                        onAddToCart={onAddToCart}
+                    />
+                ))}
             </div>
         </main>
     )
-
 }
 
 export default ProductList
