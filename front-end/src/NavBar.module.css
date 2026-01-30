@@ -1,7 +1,6 @@
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 40;
 
   width: 100%;
   background: #dbeafe;
@@ -154,7 +153,6 @@
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 20;
 }
 
 .cartDrawer {
@@ -169,7 +167,6 @@
   background: white;
   border-left: 1px solid rgba(0, 0, 0, 0.12);
   padding: 12px;
-  z-index: 50;
   /* higher than navbar */
 }
 

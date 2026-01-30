@@ -11,8 +11,8 @@ function ProductList({ products, onAddToCart }) {
     }
 
     return (
-        <main>
-            <h1>All Products:</h1>
+        <div className={styles.listContainer}>
+            
             <div className={styles.productList} >
                 {products.map((product) => (
                     <Product
@@ -26,7 +26,7 @@ function ProductList({ products, onAddToCart }) {
                     />
                 ))}
             </div>
-        </main>
+        </div>
     )
 }
 
