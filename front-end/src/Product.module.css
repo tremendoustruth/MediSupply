@@ -29,6 +29,7 @@
     height: fit-content;
     margin: 10px;
     padding: 15px;
+    gap: 1rem;
 }
 
 .productPlaceholder {
