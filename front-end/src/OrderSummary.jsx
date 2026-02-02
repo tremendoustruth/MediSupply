@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import styles from "./OrderSummary.module.css";
+import { Link } from "react-router-dom"
 
 function OrderSummary({ cartItems = [], subtotal = 0 }) {
     const formatMoney = (n) =>
@@ -16,13 +16,7 @@ function OrderSummary({ cartItems = [], subtotal = 0 }) {
 
     return (
         <div className={styles.checkoutPage}>
-            <h1 className={styles.title}>Checkout</h1>
-            <Link className={styles.backLink} to="/">
-                ← Back to Shopping
-            </Link>
-
             <aside className={styles.summaryCard}>
-
                 <h2 className={styles.title}>Order Summary</h2>
                 {cartItems.length === 0 ? (
                     <p className={styles.emptyText}>
