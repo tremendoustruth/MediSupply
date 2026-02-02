@@ -1,0 +1,8 @@
+.backLink {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: rgb(1, 1, 37);
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 25px;
+}
