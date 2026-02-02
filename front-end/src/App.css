@@ -68,3 +68,9 @@ body {
   padding: 32px 20px;
   /* centers text and button */
 }
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 32px;
+}

@@ -8,11 +8,10 @@ import { Link } from "react-router-dom";
 function Checkout({ cartItems = [], subtotal = 0, cartCount = 0 }) {
     return (
         <div className={styles.page}>
+            <h1 className={styles.title}>Checkout</h1>
             <Link className={styles.backLink} to="/">
                 ← Back to Shopping
             </Link>
-
-            <h1 className={styles.title}>Checkout</h1>
             <div className={styles.layout}>
                 {/* left column */}
                 <div className={styles.left}>

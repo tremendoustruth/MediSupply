@@ -21,6 +21,8 @@
 
 .title {
     margin: 0 0 16px;
+    font-size: 24px;
+    text-align: center;
 }
 
 .layout {
@@ -37,6 +39,5 @@
 }
 
 .right {
-    position: sticky;
     top: 90px;
 }

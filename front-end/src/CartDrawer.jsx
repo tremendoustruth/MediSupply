@@ -47,7 +47,7 @@ function CartDrawer({
                             <div className={styles["cart-drawer__summary"]}>
                                 <div className={styles["cart-drawer__row"]}>
                                     <span>Subtotal</span>
-                                    <strong>{formatMoney(0)}</strong>
+                                    {formatMoney(0)}
                                 </div>
                                 <Link to="/checkout" className={styles["cart-drawer__checkout"]} disabled title="Add items to cart to checkout">
                                     Checkout
@@ -110,7 +110,7 @@ function CartDrawer({
                             <div className={styles["cart-drawer__summary"]}>
                                 <div className={styles["cart-drawer__row"]}>
                                     <span>Subtotal</span>
-                                    <strong>{formatMoney(subtotal)}</strong>
+                                    {formatMoney(subtotal)}
                                 </div>
                                 <Link to="/checkout" onClick={onClose} className={styles["cart-drawer__checkout"]}>
                                     Checkout
