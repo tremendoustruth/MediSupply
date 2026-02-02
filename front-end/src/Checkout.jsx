@@ -7,12 +7,13 @@ import { Link } from "react-router-dom";
 
 function Checkout({ cartItems = [], subtotal = 0, cartCount = 0 }) {
     return <>
+
         <Link className={styles.backLink} to="/">
             ← Back to Shopping
         </Link>
-        <ShippingCard />
-        <Payment />
-        <OrderSummary cartItems={cartItems} subtotal={subtotal} cartCount={cartCount} />
+        <ShippingCard className={styles.leftColumn} />
+        <Payment className={styles.leftColumn} />
+        <OrderSummary className={styles.rightColumn} cartItems={cartItems} subtotal={subtotal} cartCount={cartCount} />
     </>
 
 }
