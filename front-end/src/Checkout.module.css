@@ -7,6 +7,37 @@
     margin-left: 25px;
 }
 
-.leftColumn {
-    display:
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.backLink {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.title {
+    margin: 0 0 16px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.right {
+    top: 90px;
 }
