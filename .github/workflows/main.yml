@@ -14,24 +14,24 @@ jobs:
 #       # - run: npm ci
 #       # - run: npm run start & 
 
-  test:
+  docker-build:
     runs-on: ubuntu-latest
     defaults:
       run: 
-        working-directory: front-end
+        working-directory: OTC-medical-supplies
     steps: 
       - name: Checkout repo
         uses: actions/checkout@v5
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22.x"
+      - name: Build and run docker compose
+        run: docker compose up --build
+      #   with:
+      #     node-version: "22.x"
 
-      - name: install dependencies 
-        run: npm ci
-      - name: run test
-        run: npm t
+      # - name: install dependencies 
+      #   run: npm ci
+      # - name: run test
+      #   run: npm t
 
   # deploy:
   #   needs: test 
