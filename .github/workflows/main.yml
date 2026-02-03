@@ -10,7 +10,4 @@ jobs:
 
       - name: Build and run docker compose
         run: docker compose up --build
-        defaults:
-          run: 
-            working-directory: OTC-medical-supplies
 
