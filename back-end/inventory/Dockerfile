@@ -35,4 +35,4 @@ COPY . .
 EXPOSE 9876
 
 # Run the application.
-CMD npm run start
+CMD node index.js
