@@ -1,7 +1,7 @@
 import styles from "./OrderSummary.module.css";
 import { Link } from "react-router-dom"
 
-function OrderSummary({ cartItems = [], subtotal = 0, setCartItems }) {
+function OrderSummary({ cartItems = [], subtotal = 0, setCartItems, showPlaceOrder = true }) {
     const formatMoney = (n) =>
         Number(n || 0).toLocaleString("en-US", {
             style: "currency",
@@ -10,13 +10,13 @@ function OrderSummary({ cartItems = [], subtotal = 0, setCartItems }) {
 
     // Hardcoded values for tax and shipping
     const taxRate = 0.08;
-    const tax = subtotal * taxRate;
+    const tax = +(subtotal * taxRate).toFixed(2);
     const shipping = 0;
-    const total = subtotal + tax + shipping;
+    const total = +(subtotal + tax + shipping).toFixed(2);
 
-    const confirmClick = function () {
-        setCartItems([])
-    }
+    // const confirmClick = function () {
+    //     if (setCartItems) setCartItems([]); // Clear cart on order confirmation
+    // }
 
     return (
         <aside className={styles.summaryCard}>
@@ -61,9 +61,11 @@ function OrderSummary({ cartItems = [], subtotal = 0, setCartItems }) {
                             <span>{formatMoney(total)}</span>
                         </div>
                     </div>
-                    <Link to="/confirm" className={styles.placeOrderBtn} onClick={confirmClick}>
-                        Place Order
-                    </Link>
+                    {showPlaceOrder && (
+                        <Link to="/confirm" className={styles.placeOrderBtn}>
+                            Place Order
+                        </Link>
+                    )}
                     <div className={styles.secureNote}>
                         🔒 Secure checkout
                         <div className={styles.secureSubtext}>Your payment information is encrypted</div>
