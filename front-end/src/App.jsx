@@ -119,13 +119,15 @@ function App() {
             }
           />
 
-          <Route path="/checkout" element={<Checkout 
-            cartItems={cartItems} 
-            subtotal={subtotal} 
+          <Route path="/checkout" element={<Checkout
+            cartItems={cartItems}
+            subtotal={subtotal}
             cartCount={cartCount}
             setCartItems={setCartItems}
           />} />
-          <Route path="/confirm" element={<ConfirmationPage/>}/>
+          <Route path="/confirm" element={<ConfirmationPage
+            cartItems={cartItems}
+            subtotal={subtotal} />} />
         </Routes>
       </main>
 
