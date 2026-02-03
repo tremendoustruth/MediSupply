@@ -12,6 +12,9 @@ function ConfirmationPage({ cartItems = [], subtotal = 0 }) {
             Order Confirmed!
             <OrderSummary cartItems={cartItems} subtotal={subtotal} showPlaceOrder={false} />
 
+            <Link className={styles.backLink} to="/">
+                Back to Shopping
+            </Link>
         </div>
     )
 }
