@@ -4,13 +4,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run: 
-        working-directory: OTC-medical-supplies
     steps: 
       - name: Checkout repo
         uses: actions/checkout@v5
 
       - name: Build and run docker compose
         run: docker compose up --build
+        defaults:
+          run: 
+            working-directory: OTC-medical-supplies
 
