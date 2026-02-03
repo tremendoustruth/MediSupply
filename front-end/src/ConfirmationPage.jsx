@@ -10,6 +10,9 @@ function ConfirmationPage() {
             <h1 className={styles.confirm}>
                 Order Confirmed!
             </h1>
+            <Link className={styles.backLink} to="/">
+                Back to Shopping
+            </Link>
         </div>
     )
 }

@@ -13,7 +13,7 @@ function NavBar({ cartCount, onCartClick }) {
 
     const goHome = () => navigate("/");
 
-    if (location.pathname === "/checkout") { //TODO: add confirmation page as well
+    if (location.pathname === "/checkout" || location.pathname === "/confirm") { //TODO: add confirmation page as well
         return null; // Hide NavBar on checkout and confirmation pages
     }
 
