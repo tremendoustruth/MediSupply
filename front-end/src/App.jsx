@@ -6,6 +6,7 @@ import CartDrawer from './CartDrawer.jsx'
 import ProductList from './ProductList.jsx'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Checkout from './Checkout.jsx'
+import ConfirmationPage from './ConfirmationPage.jsx'
 
 
 
@@ -18,7 +19,7 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const location = useLocation();
   useEffect(() => {
-    if (location.pathname === "/checkout") { //TODO: include confirmation page once created
+    if (location.pathname === "/checkout" || location.pathname === "/confirm") {
       setIsCartOpen(false);
     }
   }, [location.pathname]);
@@ -118,7 +119,13 @@ function App() {
             }
           />
 
-          <Route path="/checkout" element={<Checkout cartItems={cartItems} subtotal={subtotal} cartCount={cartCount} />} />
+          <Route path="/checkout" element={<Checkout 
+            cartItems={cartItems} 
+            subtotal={subtotal} 
+            cartCount={cartCount}
+            setCartItems={setCartItems}
+          />} />
+          <Route path="/confirm" element={<ConfirmationPage/>}/>
         </Routes>
       </main>
 
