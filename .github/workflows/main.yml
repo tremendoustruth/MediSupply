@@ -2,14 +2,13 @@ name: Docker build app
 on: [push]
 
 jobs:
-  build:
+  compose:
     runs-on: ubuntu-latest
-    defaults:
-      run: 
-        working-directory: OTC-medical-supplies
-    steps: 
-      - name: Checkout repo
-        uses: actions/checkout@v5
+    steps:
+      - name: Set up Docker Compose
+        uses: docker/setup-compose-action@v1
+        with:
+          version: latest
 
       - name: Build and run docker compose
         run: docker compose up --build
